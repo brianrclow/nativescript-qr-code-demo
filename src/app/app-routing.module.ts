@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes } from '@angular/router';
 import { NativeScriptRouterModule } from '@nativescript/angular';
 
-import { EventComponent } from './evet/event.component';
+import { EventComponent } from './event/event.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/event', pathMatch: 'full' },

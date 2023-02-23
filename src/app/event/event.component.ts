@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class EventComponent {
   constructor() {}
+
+  scanNow() {
+    console.log('Scan Now');
+  }
 }
