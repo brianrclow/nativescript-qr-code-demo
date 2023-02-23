@@ -1,0 +1,16 @@
+<GridLayout class="scanner-modal" iosOverflowSafeArea="true">
+  <MLKitView
+    iosOverflowSafeArea="true"
+    class="camera-view"
+    cameraPosition="back"
+    detectionType="barcode"
+    aspectRatio="fill"
+    (loaded)="onLoaded($event)"
+    (detection)="onDetection($event)"
+  ></MLKitView>
+  <Button
+    class="btn-primary cancel-button"
+    text="Cancel Scan"
+    (tap)="close(null)"
+  ></Button>
+</GridLayout>
