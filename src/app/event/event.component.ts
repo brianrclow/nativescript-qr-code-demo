@@ -14,7 +14,6 @@ export class EventComponent {
     const ref = this._scannerService.open();
 
     firstValueFrom(ref.afterClosed()).then((value) => {
-      console.log('value', value);
       if (value != null) {
         setTimeout(() => {
           alert(`${value}`);

@@ -9,7 +9,6 @@ export class ScannerService {
   constructor(private _nativeDialogService: NativeDialogService) {}
 
   open() {
-    console.log('OPEN?');
     return this._nativeDialogService.open(ScannerModalComponent, {
       nativeOptions: {
         stretched: true,

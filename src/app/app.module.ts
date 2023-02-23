@@ -12,6 +12,6 @@ import { ScannerModule } from './scanner/scanner.module';
   imports: [NativeScriptModule, AppRoutingModule, MLKitModule, ScannerModule],
   declarations: [AppComponent, EventComponent],
   providers: [NativeDialogService],
-  schemas: [NO_ERRORS_SCHEMA],  
+  schemas: [NO_ERRORS_SCHEMA],
 })
 export class AppModule {}
