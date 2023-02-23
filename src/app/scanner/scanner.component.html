@@ -1,9 +1,15 @@
-<GridLayout class="scanner-modal" iosOverflowSafeArea="true">
+<GridLayout
+  class="scanner-modal"
+  iosOverflowSafeArea="true"
+  rows="*, auto"
+  columns="10*, 80*, 10*"
+  vertical-alignment="bottom"
+>
   <MLKitView
     iosOverflowSafeArea="true"
     class="camera-view"
     cameraPosition="back"
-    detectionType="barcode"
+    detectionType="all"
     aspectRatio="fill"
     (loaded)="onLoaded($event)"
     (detection)="onDetection($event)"
