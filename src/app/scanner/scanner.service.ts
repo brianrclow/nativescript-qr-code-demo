@@ -6,10 +6,11 @@ import { NativeDialogService } from '@nativescript/angular';
 
 @Injectable({ providedIn: 'root' })
 export class ScannerService {
-  constructor(private nativesModal: NativeDialogService) {}
+  constructor(private _nativeDialogService: NativeDialogService) {}
 
   open() {
-    return this.nativesModal.open(ScannerModalComponent, {
+    console.log('OPEN?');
+    return this._nativeDialogService.open(ScannerModalComponent, {
       nativeOptions: {
         stretched: true,
         fullscreen: isAndroid ? true : false,

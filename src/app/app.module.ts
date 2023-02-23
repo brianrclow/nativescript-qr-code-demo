@@ -5,14 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EventComponent } from './event/event.component';
 import { MLKitModule } from '@nativescript/mlkit-core/angular';
-import { ScannerService } from './scanner/scanner.service';
-import { ScannerModalComponent } from './scanner/scanner.component';
+import { ScannerModule } from './scanner/scanner.module';
 
 @NgModule({
   bootstrap: [AppComponent],
-  imports: [NativeScriptModule, AppRoutingModule, MLKitModule],
-  declarations: [AppComponent, EventComponent, ScannerModalComponent],
-  providers: [ScannerService, NativeDialogService],
-  schemas: [NO_ERRORS_SCHEMA],
+  imports: [NativeScriptModule, AppRoutingModule, MLKitModule, ScannerModule],
+  declarations: [AppComponent, EventComponent],
+  providers: [NativeDialogService],
+  schemas: [NO_ERRORS_SCHEMA],  
 })
 export class AppModule {}

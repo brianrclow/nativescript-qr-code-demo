@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { LoadEventData } from '@nativescript/core';
 import { BarcodeResult } from '@nativescript/mlkit-barcode-scanning';
 import { MLKitView } from '@nativescript/mlkit-core';
@@ -13,7 +13,9 @@ import { ScannerService } from '../scanner/scanner.service';
 export class EventComponent implements OnInit {
   $scannedValue = new Subject<string>();
   camera: MLKitView;
-  constructor(private _scannerService: ScannerService) {}
+  private _scannerService = inject(ScannerService);
+
+  constructor() {}
 
   ngOnInit(): void {
     this.$scannedValue
@@ -43,7 +45,7 @@ export class EventComponent implements OnInit {
     firstValueFrom(ref.afterClosed()).then((value) => {
       console.log('value', value);
       setTimeout(() => {
-        alert(`${value}`);
+        alert(`you scanned ${value}`);
       }, 500);
     });
   }
